@@ -19,11 +19,11 @@ Program that accepts list of chords as input and outputs a formatted tab of outp
 ### Example input: 
 F#maj, G#min, Amin7, E5
 ### Example output:
---F#maj---G#min---Amin7---E5
---3-------4-------0-------4
---4-------6-------2-------2
---4-------6-------3-------2
---2-------4-------5-------0
+--F#maj---G#min---Amin7---E5\
+--3-------4-------0-------4\
+--4-------6-------2-------2\
+--4-------6-------3-------2\
+--2-------4-------5-------0\
 
 ## What are stretch goals?
 Using binary I/O to output to a pretty html file instead of the terminal
