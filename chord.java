@@ -1,4 +1,4 @@
-
+import java.util.*;
 
 public class chord {
 
@@ -7,20 +7,39 @@ public class chord {
     private String fifth;
     private String seventh;//may not be used, may be null
 
-    String[] roots = {"A", "Bb", "B", "C","Db","D","Eb","E","F","Gb","G","Ab"};
+    String[] roots = {"A ", "Bb", "B ", "C ","Db","D ","Eb","E ","F ","Gb","G ","Ab"};
+    List<String> rootsList = Arrays.asList(roots);
+
     //constructor takes name, return list of four numbers
     public chord(String chordName, String[] E, String[] A, String[] D, String[] G){
-       
+        
+        if (rootsList.contains(chordName.substring(0,2)) ){
 
-        if (chordName.charAt(1) !='b'){
-            this.root = chordName.substring(0,1);
+            this.root = chordName.substring(0,2);
+
+            if (chordName.substring(2, 5).equals("maj")){
+                this.third = rootsList.get((rootsList.indexOf(this.root)+4)%12);//mod 12 to loop back around
+            }else {
+                this.third = rootsList.get((rootsList.indexOf(this.root)+3)%12);
+            }
+            this.fifth = rootsList.get((rootsList.indexOf(this.root)+7)%12);
+
+        }
+        
             
 
 
-        }
+        
 
     }
     public String getRoot(){
         return this.root;
     }
+    public String getThird(){
+        return this.third;
+    }
+    public String getFifth(){
+        return this.fifth;
+    }
+
 }
