@@ -1,4 +1,4 @@
-package helper;
+
 
 public class chord {
 
@@ -14,6 +14,7 @@ public class chord {
 
         if (chordName.charAt(1) !='b'){
             this.root = chordName.substring(0,1);
+            
 
 
         }

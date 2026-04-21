@@ -1,8 +1,6 @@
 
 import java.util.Collection;
 
-import helper.chord;
-
 public class mainsuite {
     static String[] E = {"E","F","Gb","G","Ab","A", "Bb", "B", "C","Db","D","Eb"};
     static String[] A = {"A", "Bb","B", "C","Db","D","Eb", "E","F","Gb","G","Ab"};
