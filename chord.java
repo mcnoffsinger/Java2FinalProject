@@ -19,12 +19,21 @@ public class chord {
 
             if (chordName.substring(2, 5).equals("maj")){
                 this.third = rootsList.get((rootsList.indexOf(this.root)+4)%12);//mod 12 to loop back around
+                if (chordName.substring(5,6).equals("7")){
+                    this.seventh = rootsList.get((rootsList.indexOf(this.root)+11)%12);
+                }
             }else {
                 this.third = rootsList.get((rootsList.indexOf(this.root)+3)%12);
+                if (chordName.substring(5,6).equals("7")){
+                    this.seventh = rootsList.get((rootsList.indexOf(this.root)+10)%12);
+                }
             }
             this.fifth = rootsList.get((rootsList.indexOf(this.root)+7)%12);
-
         }
+
+            
+
+        
         
             
 
@@ -40,6 +49,9 @@ public class chord {
     }
     public String getFifth(){
         return this.fifth;
+    }
+    public String getSeventh(){
+        return this.seventh;
     }
 
 }
