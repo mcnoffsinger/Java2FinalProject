@@ -17,7 +17,7 @@ public class chord {
     public chord(String chordName, String[] E, String[] A, String[] D, String[] G){
 
         if (chordName.length() != 6 || !(rootsList.contains(chordName.substring(0,2)) )){
-            this.name = "EEEEEE";
+            this.name = "ERROR ";
             this.root = "E ";
             this.fifth = "E ";
             this.third = "E ";
