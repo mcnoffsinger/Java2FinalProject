@@ -2,18 +2,28 @@ import java.util.*;
 
 public class chord {
 
+    private String name;
+
+
     private String root;
     private String third;
     private String fifth;
-    private String seventh;//may not be used, may be null
+    private String seventh = null;//may not be used, may be null
 
     String[] roots = {"A ", "Bb", "B ", "C ","Db","D ","Eb","E ","F ","Gb","G ","Ab"};
     List<String> rootsList = Arrays.asList(roots);
 
     //constructor takes name, return list of four numbers
     public chord(String chordName, String[] E, String[] A, String[] D, String[] G){
+
+        if (chordName.length() != 6 || !(rootsList.contains(chordName.substring(0,2)) )){
+            this.name = "EEEEEE";
+            this.root = "E ";
+            this.fifth = "E ";
+            this.third = "E ";
         
-        if (rootsList.contains(chordName.substring(0,2)) ){
+        
+        }else {
 
             this.root = chordName.substring(0,2);
 
@@ -29,6 +39,8 @@ public class chord {
                 }
             }
             this.fifth = rootsList.get((rootsList.indexOf(this.root)+7)%12);
+
+            this.name = chordName;
         }
 
             
@@ -52,6 +64,9 @@ public class chord {
     }
     public String getSeventh(){
         return this.seventh;
+    }
+    public String getName(){
+        return this.name;
     }
 
 }
