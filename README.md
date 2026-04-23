@@ -1,6 +1,11 @@
 # Bass Tab Creator 🎸
 
 ## How to use
+CLONE THE REPO AND OPEN IT IN VS CODE!  
+In the terminal, run mainsuite.java or press the play button (if you have the java extensions). The exact command should be `java mainsuite.java`. If this does not work, compile the other two files with `javac chord.java` and `javac tab.java`.  
+
+
+
 The program will prompt the user with entering in a chord name. These must be formatted like this: `XXmmm7`. XX is the two character note the chord starts on, like A or Ab (A flat). the "mmm" bit should be replaced with "min" or "maj" to indicate the type of chord. The last character of the chord needs to be either a blank space or a "7". If an incorrect stream of text is entered the chord will be ERROR and all of th enotes in it will be E. After the chords are entered, type exit to see the results.  
 
 If the terminal is not long enough then the output will appear garbled and messy. Please extend the display of the terminal so that you can read each line on it's own.  
